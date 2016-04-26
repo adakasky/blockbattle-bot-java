@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667c5f40-8e4c-46e1-aff4-d1f2b6a33065" name="Default" comment="" />
+    <list default="true" id="667c5f40-8e4c-46e1-aff4-d1f2b6a33065" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bot/BotParser.java" afterPath="$PROJECT_DIR$/src/bot/BotParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bot/BotStarter.java" afterPath="$PROJECT_DIR$/src/bot/BotStarter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bot/BotState.java" afterPath="$PROJECT_DIR$/src/bot/BotState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/field/Cell.java" afterPath="$PROJECT_DIR$/src/field/Cell.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/field/CellType.java" afterPath="$PROJECT_DIR$/src/field/CellType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/field/Field.java" afterPath="$PROJECT_DIR$/src/field/Field.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/field/Shape.java" afterPath="$PROJECT_DIR$/src/field/Shape.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/field/ShapeType.java" afterPath="$PROJECT_DIR$/src/field/ShapeType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/moves/MoveType.java" afterPath="$PROJECT_DIR$/src/moves/MoveType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/Player.java" afterPath="$PROJECT_DIR$/src/player/Player.java" />
+    </list>
     <ignored path="block-battle-java.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -23,39 +35,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BotParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bot/BotParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#2220#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/field/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="53" column="29" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1911#1912#0" expanded="true" />
+                <element signature="e#1954#1955#0" expanded="true" />
+                <element signature="e#1984#1985#0" expanded="true" />
+                <element signature="e#2027#2028#0" expanded="true" />
+                <element signature="e#2057#2058#0" expanded="true" />
+                <element signature="e#2100#2101#0" expanded="true" />
+                <element signature="e#2130#2131#0" expanded="true" />
+                <element signature="e#2173#2174#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BotStarter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Field.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/field/Field.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2774">
+              <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
+              <folding>
+                <element signature="e#5702#5703#0" expanded="true" />
+                <element signature="e#5780#5781#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BotStarter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bot/BotStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+            <state relative-caret-position="1768">
+              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1572#1582#0" expanded="true" />
+                <element signature="e#1514#1524#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,12 +99,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/moves/MoveType.java" />
-        <option value="$PROJECT_DIR$/src/field/Shape.java" />
-        <option value="$PROJECT_DIR$/src/field/Cell.java" />
-        <option value="$PROJECT_DIR$/src/field/Field.java" />
+        <option value="$PROJECT_DIR$/src/bot/BotParser.java" />
         <option value="$PROJECT_DIR$/src/bot/BotState.java" />
+        <option value="$PROJECT_DIR$/src/field/CellType.java" />
+        <option value="$PROJECT_DIR$/src/field/ShapeType.java" />
+        <option value="$PROJECT_DIR$/src/field/Shape.java" />
+        <option value="$PROJECT_DIR$/src/moves/MoveType.java" />
+        <option value="$PROJECT_DIR$/src/player/Player.java" />
+        <option value="$PROJECT_DIR$/src/field/Cell.java" />
         <option value="$PROJECT_DIR$/src/bot/BotStarter.java" />
+        <option value="$PROJECT_DIR$/src/field/Field.java" />
       </list>
     </option>
   </component>
@@ -223,7 +247,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../noXitBot" />
@@ -953,16 +977,16 @@
       <option name="presentableId" value="Default" />
       <updated>1461644874262</updated>
       <workItem from="1461644877431" duration="4609000" />
-      <workItem from="1461651417999" duration="24000" />
+      <workItem from="1461651417999" duration="1990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4633000" />
+    <option name="totallyTimeSpent" value="6599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -970,25 +994,25 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1008,7 +1032,7 @@
         <state relative-caret-position="1102">
           <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
           <folding>
-            <element signature="e#0#2220#0" expanded="true" />
+            <element signature="e#0#2672#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1020,6 +1044,14 @@
           <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1911#1912#0" expanded="true" />
+            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
+            <element signature="e#2130#2131#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1030,22 +1062,45 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1572#1582#0" expanded="true" />
+            <element signature="e#1514#1524#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/bot/BotParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        <state relative-caret-position="267">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#2672#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/moves/MoveType.java">
+    <entry file="file://$PROJECT_DIR$/src/field/CellType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        <state relative-caret-position="285">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/field/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1911#1912#0" expanded="true" />
+            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
+            <element signature="e#2130#2131#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,68 +1108,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/field/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4237">
-          <caret line="242" column="5" selection-start-line="242" selection-start-column="5" selection-end-line="242" selection-end-column="5" />
+        <state relative-caret-position="2186">
+          <caret line="231" column="42" selection-start-line="231" selection-start-column="42" selection-end-line="231" selection-end-column="42" />
+          <folding>
+            <element signature="e#7616#7617#0" expanded="true" />
+            <element signature="e#7643#7644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moves/MoveType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/field/Field.java">
+    <entry file="file://$PROJECT_DIR$/src/player/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="101" column="43" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
+        <state relative-caret-position="400">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/field/CellType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bot/BotState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/field/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        <state relative-caret-position="2071">
+          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bot/BotParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#2220#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#4229#4230#0" expanded="true" />
+            <element signature="e#4273#4274#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bot/BotStarter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+        <state relative-caret-position="1768">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1572#1582#0" expanded="true" />
+            <element signature="e#1514#1524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/field/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2774">
+          <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
+          <folding>
+            <element signature="e#5702#5703#0" expanded="true" />
+            <element signature="e#5780#5781#0" expanded="true" />
           </folding>
         </state>
       </provider>

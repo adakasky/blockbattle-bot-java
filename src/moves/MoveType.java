@@ -19,17 +19,17 @@ package moves;
 
 /**
  * MoveType class
- * 
+ * <p>
  * Enum for all possible move types
- * 
+ *
  * @author Jim van Eeden <jim@starapple.nl>
  */
 
 public enum MoveType {
-	DOWN, LEFT, RIGHT, TURNLEFT, TURNRIGHT, DROP;
-	
-	@Override
-	public String toString() {
-		return this.name().toLowerCase();
-	}
+    DOWN, LEFT, RIGHT, TURNLEFT, TURNRIGHT, DROP;
+
+    @Override
+    public String toString() {
+        return this.name().toLowerCase();
+    }
 }

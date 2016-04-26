@@ -19,12 +19,12 @@ package field;
 
 /**
  * ShapeType class
- * 
+ * <p>
  * Enum for all possible Shape types
- * 
+ *
  * @author Jim van Eeden <jim@starapple.nl>
  */
 
 public enum ShapeType {
-	I, J, L, O, S, T, Z, NONE;
+    I, J, L, O, S, T, Z, NONE;
 }
