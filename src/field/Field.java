@@ -30,14 +30,12 @@ public class Field {
 
     private int width;
     private int height;
-    private String initialField;
     private Cell grid[][];
 
-    public Field(int width, int height, String initialField) {
+    public Field(int width, int height, String fieldString) {
         this.width = width;
         this.height = height;
-        this.initialField = initialField;
-        parse(this.initialField);
+        parse(fieldString);
     }
 
     /**
@@ -62,7 +60,7 @@ public class Field {
         }
     }
 
-    private String createString() {
+    private String newState() {
         StringBuilder builder = new StringBuilder();
 
         for (int i = 0; i < this.height; i++) {
@@ -118,20 +116,6 @@ public class Field {
         }
     }
 
-    private int columnHeight(int column) {
-        int r = 0;
-        for (; r < this.height && (this.grid[column][r].isEmpty() || this.grid[column][r].isShape()); r++) ;
-        return this.height - r;
-    }
-
-    public int aggregateHeight() {
-        int total = 0;
-        for (int c = 0; c < this.width; c++) {
-            total += this.columnHeight(c);
-        }
-        return total;
-    }
-
     private boolean isLine(int row) {
         for (int c = 0; c < this.width; c++) {
             if (this.grid[c][row].isEmpty() || this.grid[c][row].isSolid()) {
@@ -151,7 +135,7 @@ public class Field {
         return count;
     }
 
-    public boolean canMoveLeft(Shape piece) {
+    public boolean hasLeft(Shape piece) {
         Shape tempPiece = piece.clone();
         tempPiece.oneLeft();
         Cell[] tempBlocks = tempPiece.getBlocks();
@@ -180,71 +164,19 @@ public class Field {
         return true;
     }
 
-    public boolean canMoveDown(Shape piece) {
+    public boolean reachedBottom(Shape piece) {
         Shape tempPiece = piece.clone();
         tempPiece.oneDown();
         Cell[] tempBlocks = tempPiece.getBlocks();
         for (Cell single : tempBlocks) {
             if (single.hasCollision(this) || single.isOutOfBoundaries(this))
-                return false;
+                return true;
         }
-        return true;
+        return false;
     }
 
     public Field clone() {
-        return new Field(this.width, this.height, this.createString());
-    }
-
-    public int getRowTrans() {
-        int transitions = 0;
-        Cell last = new Cell();
-
-
-        for (int r = 0; r < this.height; r++) {
-            if (this.grid[0][r].isEmpty())
-                last.setEmpty();
-            else
-                last.setBlock();
-            for (int c = 0; c < this.width; c++) {
-                if (this.grid[c][r].isSolid() || this.grid[c][r].isShape())
-                    break;
-                if (this.grid[c][r].isEmpty() != last.isEmpty()) {
-                    transitions++;
-                    if (last.isEmpty())
-                        last.setBlock();
-                    else
-                        last.setEmpty();
-                }
-                if (c == this.width - 1 && this.grid[c][r].isBlock())
-                    transitions++;
-            }
-        }
-        return transitions;
-    }
-
-    public int getColTrans() {
-        int transitions = 0;
-        Cell last = new Cell();
-
-
-        for (int c = 0; c < this.width; c++) {
-            last.setEmpty();
-            for (int r = 0; r < this.height; r++) {
-                if (this.grid[c][r].isSolid())
-                    break;
-                if (this.grid[c][r].isShape())
-                    continue;
-                if (this.grid[c][r].isEmpty() != last.isEmpty()) {
-                    transitions++;
-                    if (last.isEmpty())
-                        last.setBlock();
-                    else
-                        last.setEmpty();
-                }
-            }
-        }
-
-        return transitions;
+        return new Field(this.width, this.height, this.newState());
     }
 
     public int getHoles() {
@@ -285,53 +217,9 @@ public class Field {
         return count;
     }
 
-    public double evaluate(Shape _setPiece, int myCombo) {
-
-        double score;
-
-        score = (this.getHeight() - _setPiece.getLocation().getY() - _setPiece.getSize() / 2) * -4.5
-                + this.lines() * myCombo * 4.4
-                + this.getRowTrans() * -3.2
-                + this.getColTrans() * -9.35
-                + this.getHoles() * -7.9
-                + this.getSums() * -3.4;
-
-        return score;
-    }
-
-    public int getSums() {
-        int well_sums = 0;
-
-        for (int r = 0; r < this.height; r++) {
-            for (int c = 1; c < this.width - 1; c++) {
-                if (this.grid[c][r].isEmpty() && this.grid[c - 1][r].isBlock() && this.grid[c + 1][r].isBlock()) {
-                    well_sums++;
-                    for (int k = r + 1; k < this.height; k++)
-                        if (this.grid[c][k].isEmpty())
-                            well_sums++;
-                        else
-                            break;
-                }
-            }
-        }
-        for (int r = 0; r < this.height; r++) {
-            if (this.grid[0][r].isEmpty() && this.grid[1][r].isBlock()) {
-                well_sums++;
-                for (int k = r + 1; k < this.height; k++)
-                    if (this.grid[0][k].isEmpty())
-                        well_sums++;
-            }
-        }
-
-        for (int r = 0; r < this.height; r++) {
-            if (this.grid[this.width - 1][r].isEmpty() && this.grid[this.width - 2][r].isBlock()) {
-                well_sums++;
-                for (int k = r + 1; k < this.height; k++)
-                    if (this.grid[this.width - 1][k].isEmpty())
-                        well_sums++;
-            }
-        }
-
-        return well_sums;
+    public double fitness(Shape piece, int myCombo) {
+        return  (this.getHeight() - piece.getLocation().getY() - piece.getSize()) * -5
+                + this.lines() * myCombo * 3
+                + this.getHoles() * -10;
     }
 }

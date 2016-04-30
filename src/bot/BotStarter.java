@@ -49,20 +49,20 @@ public class BotStarter {
     public ArrayList<MoveType> getMoves(BotState state, long timeout) {
         ArrayList<MoveType> moves = new ArrayList<MoveType>();
 
-        Field grid = state.getMyField();
-        ShapeType workingPiece = state.getCurrentShape();
-        ShapeType workingNextPiece = state.getNextShape();
+        Field field = state.getMyField();
+        ShapeType current = state.getCurrentShape();
+        ShapeType next = state.getNextShape();
         int myCombo = state.getMyCombo();
 
-        Shape piece = new Shape(workingPiece, grid, state.getShapeLocation());
-        Shape nextPiece = new Shape(workingNextPiece, grid, (workingNextPiece == ShapeType.O) ? new Point(4, -1) : new Point(3, -1));
+        Shape piece = new Shape(current, field, state.getShapeLocation());
+        Shape nextPiece = new Shape(next, field, (next == ShapeType.O) ? new Point(4, -1) : new Point(3, -1));
 
-        Best best = getBest(grid, piece, myCombo, nextPiece);
+        Best best = getBestFitness(field, piece, myCombo, nextPiece);
 
-        int bestRotation = best.bestRotation;
+        int bestRot = best.bestRot;
         int bestLeft = best.bestLeft;
 
-        for (; bestRotation > 0; bestRotation--)
+        for (; bestRot > 0; bestRot--)
             moves.add(MoveType.TURNRIGHT);
         if (bestLeft < 0)
             for (; bestLeft < 0; bestLeft++)
@@ -75,10 +75,10 @@ public class BotStarter {
         return moves;
     }
 
-    Best getBest(Field grid, Shape piece, int combo, Shape nextPiece) {
+    Best getBestFitness(Field field, Shape piece, int combo, Shape nextPiece) {
 
         Best best = new Best();
-        best.score = -1000;
+        best.fitness = -1000;
 
         for (int rotation = 0; rotation < 4; rotation++) {
             int left = 0;
@@ -86,59 +86,54 @@ public class BotStarter {
             if (rotation != 0)
                 piece.turnRight();
 
-            Shape _piece = piece.clone();
-            while (grid.canMoveLeft(_piece)) {
-                _piece.oneLeft();
+            Shape piece_copy = piece.clone();
+            while (field.hasLeft(piece_copy)) {
+                piece_copy.oneLeft();
                 left++;
             }
 
-            while (grid.isValid(_piece)) {
-                Shape _setPiece = _piece.clone();
+            while (field.isValid(piece_copy)) {
+                Shape piece_tmp = piece_copy.clone();
 
-                while (grid.canMoveDown(_setPiece)) {
-                    _setPiece.oneDown();
+                while (!field.reachedBottom(piece_tmp)) {
+                    piece_tmp.oneDown();
                 }
 
-                if (grid.isValidTop(_setPiece)) {
+                if (field.isValidTop(piece_tmp)) {
 
-                    double score;
-                    int totalPoints;
+                    double fitness;
 
-                    Field _grid = grid.clone();
-                    _grid.addPiece(_setPiece);
+                    Field field_copy = field.clone();
+                    field_copy.addPiece(piece_tmp);
 
-                    score = _grid.evaluate(_setPiece, combo * 2);
-
-                    totalPoints = _grid.lines() + combo;
+                    fitness = field_copy.fitness(piece_tmp, combo * 2);
 
                     if (nextPiece != null) {
-                        int removed = _grid.removeLines();
+                        int removed = field_copy.removeLines();
                         Shape next = nextPiece.clone();
-                        Best secondBest = getBest(_grid, next, combo + removed, null);
-                        score += secondBest.score;
-                        totalPoints += secondBest.points;
+                        Best secondBest = getBestFitness(field_copy, next, combo + removed, null);
+                        fitness += secondBest.fitness;
                     }
 
-                    if (score >= best.score || best.score == 0.0) {
+                    if (fitness >= best.fitness || best.fitness == 0.0) {
 
-                        best.score = score;
+                        best.fitness = fitness;
                         best.bestLeft = left;
-                        best.bestRotation = rotation;
+                        best.bestRot = rotation;
                     }
                 }
 
                 left--;
-                _piece.oneRight();
+                piece_copy.oneRight();
             }
         }
         return best;
     }
 
     private class Best {
-        double score;
+        double fitness;
         int bestLeft;
-        int bestRotation;
-        int points;
+        int bestRot;
     }
 
     public static void main(String[] args) {
